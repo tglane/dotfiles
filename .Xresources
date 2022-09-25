@@ -1,0 +1,141 @@
+!!!!! .Xresources / RESLOVED !!!!!!!!!!!!!!!!!!!!!!
+
+! MOLOKAI
+!*foreground:   #f8f8f8
+!*background:   #1b1d1e
+!*color0:       #808080
+!*color8:       #465457
+!*color1:       #d7005f
+!*color9:       #f92672
+!*color2:       #87ff00
+!*color10:      #a6e22e
+!*color3:       #ff8700
+!*color11:      #fd971f
+!*color4:       #acac85
+!*color12:      #c4be89
+!*color5:       #af5fff
+!*color13:      #ae81ff
+!*color6:       #5fd7ff
+!*color14:      #84e0f2
+!*color7:       #f8f8f8
+!*color15:      #ffffff
+
+! DRACULA
+!*foreground:    #F8F8F2
+!*background:    #282A36
+!*color0:        #44475a
+!*color8:        #6272a4
+!*color1:        #FF5555
+!*color9:        #FF6E67
+!*color2:        #50FA7B
+!*color10:       #5AF78E
+!*color3:        #F1FA8C
+!*color11:       #F4F99D
+!*color4:        #BD93F9
+!*color12:       #CAA9FA
+!*color5:        #FF79C6
+!*color13:       #FF92D0
+!*color6:        #8BE9FD
+!*color14:       #9AEDFE
+!*color7:        #BFBFBF
+!*color15:       #F8F8F2
+
+! DOOM-ONE
+!*foreground:   #bfbfbf
+!*background:   #282c34
+!*color0:       #5b6268
+!*color8:       #3f444a
+!*color1:       #ff6c6b
+!*color9:       #ff6c6b
+!*color2:       #98be65
+!*color10:      #98be65
+!*color3:       #da8548
+!*color11:      #da8548
+!*color4:       #51afef
+!*color12:      #51afef
+!*color5:       #c678dd
+!*color13:      #c678dd
+!*color6:       #a9a1e1
+!*color14:      #a9a1e1
+!*color7:       #DFDFDF
+!*color15:      #ffffff
+
+! hard contrast: *background: #1d2021
+*background: #282828
+! soft contrast: *background: #32302f
+*foreground: #ebdbb2
+! Black + DarkGrey
+*color0:  #282828
+*color8:  #928374
+! DarkRed + Red
+*color1:  #cc241d
+*color9:  #fb4934
+! DarkGreen + Green
+*color2:  #98971a
+*color10: #b8bb26
+! DarkYellow + Yellow
+*color3:  #d79921
+*color11: #fabd2f
+! DarkBlue + Blue
+*color4:  #458588
+*color12: #83a598
+! DarkMagenta + Magenta
+*color5:  #b16286
+*color13: #d3869b
+! DarkCyan + Cyan
+*color6:  #689d6a
+*color14: #8ec07c
+! LightGrey + White
+*color7:  #a89984
+*color15: #ebdbb2
+
+!!!!! Xcursor !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+ Xcursor*theme: Vanilla-DMZ-AA
+ Xcursor.size:  22
+
+!!!!! URXVT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+URxvt*termName:         rxvt-unicode-256color
+
+! SETTINGS
+URxvt*buffered:         true
+URxvt*saveLines:        1000
+URxvt*scrollBar:        false
+URxvt*iso14755:         false
+URxvt*iso14755_52:      false
+
+! BORDER
+URxvt*borderWidth:      0
+URxvt*internalBorder:   0
+
+! FONT
+URxvt*font:             xft:Hack Nerd Font:size=12
+URxvt.letterSpace:      0
+
+! LINKS
+URxvt.perl-ext-common:  default,matcher
+URxvt.url-launcher:     /usr/bin/xdg-open
+URxvt.matcher.button:   1
+
+URxvt.internalBorder:   5
+
+! Clipboard
+! URxvt.clipboard.autocopy: true
+! URxvt.keysym.Ctrl-M-c: perl:clipboard:copy
+! URxvt.keysym.Ctrl-M-v: perl:clipboard:paste
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+!!!!! XST !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+st.termname:            st-256color
+st.shell:               /bin/bash
+st.font:                CozetteVector:size=9
+st.borderpx:            16
+
+!!!!! XTERM !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+xterm.BorderWidth: 0
