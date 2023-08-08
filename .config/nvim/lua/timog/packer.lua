@@ -25,6 +25,9 @@ return require('packer').startup(function(use)
     
     -- Git integration
     use('tpope/vim-fugitive')
+
+    -- Git diff markers
+    use('airblade/vim-gitgutter')
     
     -- LSP Config
     use {
