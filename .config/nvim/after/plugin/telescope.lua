@@ -18,6 +18,11 @@ vim.keymap.set("n", ":Ss", function()
     builtin.grep_string({ search = "" })
 end)
 
+-- Fuzzy find the string under the cursor of project in current tab
+vim.keymap.set("n", ":Fs", function()
+    builtin.grep_string()
+end)
+
 -- Fuzzy find strings of project in new tab
 vim.keymap.set("n", ":Ts", function()
     vim.api.nvim_command(":tabe")
