@@ -2,6 +2,10 @@ vim.g.mapleader = ' '
 
 -- Open vim standard file browser
 vim.keymap.set('n', ':Fb', vim.cmd.Ex)
+vim.keymap.set('n', ':Tb', function()
+    vim.api.nvim_command(':tabe')
+    vim.cmd.Ex()
+end)
 
 -- Replace text in current buffer
 vim.keymap.set('n', ':Rf', function()
