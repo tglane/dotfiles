@@ -45,6 +45,8 @@ return require('packer').startup(function(use)
         {'L3MON4D3/LuaSnip'},     -- Required
       }
     }
+    use('hrsh7th/vim-vsnip')
+    use("simrat39/rust-tools.nvim")
 
   -- Indent guide
   use "lukas-reineke/indent-blankline.nvim"

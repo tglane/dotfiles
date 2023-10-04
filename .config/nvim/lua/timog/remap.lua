@@ -8,7 +8,7 @@ vim.keymap.set('n', ':Tb', function()
 end)
 
 -- Replace text in current buffer
-vim.keymap.set('n', ':Rf', function()
+vim.keymap.set('n', ':Rp', function()
     local input = vim.fn.input('Replace: ')
 
     local splitted = split_string(input, '/')
@@ -30,10 +30,10 @@ vim.keymap.set('n', 'J', 'mzJ`z')
 
 function split_string(s, sep)
     local fields = {}
-    
+
     local sep = sep or " "
     local pattern = string.format("([^%s]+)", sep)
     string.gsub(s, pattern, function(c) fields[#fields + 1] = c end)
-    
+
     return fields
 end
