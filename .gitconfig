@@ -1,0 +1,8 @@
+[alias]
+	st = status
+	cm = commit -m
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	au = add -u
+[user]
+	name = Timo Glane
+	email = timo.glane@gmail.com
