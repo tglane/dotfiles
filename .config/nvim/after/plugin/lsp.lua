@@ -11,7 +11,7 @@ lsp.ensure_installed({
   'gopls',
   'rust_analyzer',
   'tsserver',
-  'esling',
+  'eslint',
 })
 
 lsp.on_attach(function(client, bufnr)
