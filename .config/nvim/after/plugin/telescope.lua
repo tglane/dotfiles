@@ -29,3 +29,7 @@ vim.keymap.set("n", ":Ts", function()
     builtin.grep_string({ search = vim.fn.input("Grep > ") });
     -- builtin.grep_string({ search = "" })
 end)
+
+vim.keymap.set("n", ":Ca", function()
+    vim.lsp.buf.code_action()
+end)
