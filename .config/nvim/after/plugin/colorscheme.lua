@@ -1,2 +1,4 @@
--- vim.cmd.colorscheme("gruvbox")
-vim.cmd.colorscheme("horizon")
+vim.o.background = "dark"
+
+vim.cmd.colorscheme("gruvbox")
+-- vim.cmd.colorscheme("horizon")

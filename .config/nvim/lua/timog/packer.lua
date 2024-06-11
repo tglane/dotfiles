@@ -14,7 +14,7 @@ return require('packer').startup(function(use)
     }
     
     -- Themes
-    use {'morhetz/gruvbox' }
+    use { "ellisonleao/gruvbox.nvim" }
     use {'lunarvim/horizon.nvim'}
     
     -- Syntax tree parsing
