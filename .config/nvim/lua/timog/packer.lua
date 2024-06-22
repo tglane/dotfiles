@@ -13,9 +13,13 @@ return require('packer').startup(function(use)
       requires = { {'nvim-lua/plenary.nvim'} }
     }
     
+    -- Auto dark-mode
+    use { "f-person/auto-dark-mode.nvim" }
+
     -- Themes
     use { "ellisonleao/gruvbox.nvim" }
     use {'lunarvim/horizon.nvim'}
+    use { 'rmehri01/onenord.nvim' }
     
     -- Syntax tree parsing
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
