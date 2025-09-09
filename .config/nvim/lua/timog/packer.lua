@@ -8,11 +8,22 @@ return require('packer').startup(function(use)
     use 'rstacruz/vim-closer'
     
     -- Fuzzy finder
+      -- 'nvim-telescope/telescope.nvim', tag = '0.1.2',
     use {
-      'nvim-telescope/telescope.nvim', tag = '0.1.2',
+      'nvim-telescope/telescope.nvim',
       requires = { {'nvim-lua/plenary.nvim'} }
     }
-    
+
+    -- Harpoon - to pin file-locations
+    use {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        requires = { {"nvim-lua/plenary.nvim"} }
+    }
+
+    -- Session manager
+    use { "rmagatti/auto-session" }
+
     -- Auto dark-mode
     use { "f-person/auto-dark-mode.nvim" }
 
@@ -20,19 +31,19 @@ return require('packer').startup(function(use)
     use { "ellisonleao/gruvbox.nvim" }
     use {'lunarvim/horizon.nvim'}
     use { 'rmehri01/onenord.nvim' }
-    
+
     -- Syntax tree parsing
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
-    
+
     -- Undo tree
     use('mbbill/undotree')
-    
+
     -- Git integration
     use('tpope/vim-fugitive')
 
     -- Git diff markers
     use('airblade/vim-gitgutter')
-    
+
     -- LSP Config
     use {
       'VonHeikemen/lsp-zero.nvim',
@@ -42,7 +53,7 @@ return require('packer').startup(function(use)
         {'neovim/nvim-lspconfig'},             -- Required
         {'williamboman/mason.nvim'},           -- Optional
         {'williamboman/mason-lspconfig.nvim'}, -- Optional
-    
+
         -- Autocompletion
         {'hrsh7th/nvim-cmp'},     -- Required
         {'hrsh7th/cmp-nvim-lsp'}, -- Required
