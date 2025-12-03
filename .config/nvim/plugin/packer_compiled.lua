@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/timog/.cache/nvim/packer_hererocks/2.1.1716656478/share/lua/5.1/?.lua;/Users/timog/.cache/nvim/packer_hererocks/2.1.1716656478/share/lua/5.1/?/init.lua;/Users/timog/.cache/nvim/packer_hererocks/2.1.1716656478/lib/luarocks/rocks-5.1/?.lua;/Users/timog/.cache/nvim/packer_hererocks/2.1.1716656478/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/timog/.cache/nvim/packer_hererocks/2.1.1716656478/lib/lua/5.1/?.so"
+local package_path_str = "/Users/timog/.cache/nvim/packer_hererocks/2.1.1753364724/share/lua/5.1/?.lua;/Users/timog/.cache/nvim/packer_hererocks/2.1.1753364724/share/lua/5.1/?/init.lua;/Users/timog/.cache/nvim/packer_hererocks/2.1.1753364724/lib/luarocks/rocks-5.1/?.lua;/Users/timog/.cache/nvim/packer_hererocks/2.1.1753364724/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/timog/.cache/nvim/packer_hererocks/2.1.1753364724/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -74,25 +74,25 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  LuaSnip = {
-    loaded = true,
-    path = "/Users/timog/.local/share/nvim/site/pack/packer/start/LuaSnip",
-    url = "https://github.com/L3MON4D3/LuaSnip"
-  },
   ["auto-dark-mode.nvim"] = {
     loaded = true,
     path = "/Users/timog/.local/share/nvim/site/pack/packer/start/auto-dark-mode.nvim",
     url = "https://github.com/f-person/auto-dark-mode.nvim"
   },
-  ["cmp-nvim-lsp"] = {
+  ["auto-session"] = {
     loaded = true,
-    path = "/Users/timog/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
-    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+    path = "/Users/timog/.local/share/nvim/site/pack/packer/start/auto-session",
+    url = "https://github.com/rmagatti/auto-session"
   },
   ["gruvbox.nvim"] = {
     loaded = true,
     path = "/Users/timog/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
     url = "https://github.com/ellisonleao/gruvbox.nvim"
+  },
+  harpoon = {
+    loaded = true,
+    path = "/Users/timog/.local/share/nvim/site/pack/packer/start/harpoon",
+    url = "https://github.com/ThePrimeagen/harpoon"
   },
   ["horizon.nvim"] = {
     loaded = true,
@@ -104,25 +104,15 @@ _G.packer_plugins = {
     path = "/Users/timog/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
-  ["lsp-zero.nvim"] = {
-    loaded = true,
-    path = "/Users/timog/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
-    url = "https://github.com/VonHeikemen/lsp-zero.nvim"
-  },
-  ["mason-lspconfig.nvim"] = {
-    loaded = true,
-    path = "/Users/timog/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
-    url = "https://github.com/williamboman/mason-lspconfig.nvim"
-  },
   ["mason.nvim"] = {
     loaded = true,
     path = "/Users/timog/.local/share/nvim/site/pack/packer/start/mason.nvim",
-    url = "https://github.com/williamboman/mason.nvim"
+    url = "https://github.com/mason-org/mason.nvim"
   },
-  ["nvim-cmp"] = {
+  ["mini.nvim"] = {
     loaded = true,
-    path = "/Users/timog/.local/share/nvim/site/pack/packer/start/nvim-cmp",
-    url = "https://github.com/hrsh7th/nvim-cmp"
+    path = "/Users/timog/.local/share/nvim/site/pack/packer/start/mini.nvim",
+    url = "https://github.com/nvim-mini/mini.nvim"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -149,15 +139,20 @@ _G.packer_plugins = {
     path = "/Users/timog/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["rust-tools.nvim"] = {
+  rusticated = {
     loaded = true,
-    path = "/Users/timog/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
-    url = "https://github.com/simrat39/rust-tools.nvim"
+    path = "/Users/timog/.local/share/nvim/site/pack/packer/start/rusticated",
+    url = "https://github.com/haystackandroid/rusticated"
   },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/timog/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["tiny-inline-diagnostic.nvim"] = {
+    loaded = true,
+    path = "/Users/timog/.local/share/nvim/site/pack/packer/start/tiny-inline-diagnostic.nvim",
+    url = "https://github.com/rachartier/tiny-inline-diagnostic.nvim"
   },
   undotree = {
     loaded = true,
@@ -178,11 +173,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/timog/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
     url = "https://github.com/airblade/vim-gitgutter"
-  },
-  ["vim-vsnip"] = {
-    loaded = true,
-    path = "/Users/timog/.local/share/nvim/site/pack/packer/start/vim-vsnip",
-    url = "https://github.com/hrsh7th/vim-vsnip"
   }
 }
 

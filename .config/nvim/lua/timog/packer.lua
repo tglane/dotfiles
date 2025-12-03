@@ -31,6 +31,7 @@ return require('packer').startup(function(use)
     use { "ellisonleao/gruvbox.nvim" }
     use {'lunarvim/horizon.nvim'}
     use { 'rmehri01/onenord.nvim' }
+    use { 'haystackandroid/rusticated' }
 
     -- Syntax tree parsing
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
@@ -45,24 +46,16 @@ return require('packer').startup(function(use)
     use('airblade/vim-gitgutter')
 
     -- LSP Config
-    use {
-      'VonHeikemen/lsp-zero.nvim',
-      branch = 'v2.x',
-      requires = {
-        -- LSP Support
-        {'neovim/nvim-lspconfig'},             -- Required
-        {'williamboman/mason.nvim'},           -- Optional
-        {'williamboman/mason-lspconfig.nvim'}, -- Optional
+    use('neovim/nvim-lspconfig')
+    use('mason-org/mason.nvim')
 
-        -- Autocompletion
-        {'hrsh7th/nvim-cmp'},     -- Required
-        {'hrsh7th/cmp-nvim-lsp'}, -- Required
-        {'L3MON4D3/LuaSnip'},     -- Required
-      }
-    }
-    use('hrsh7th/vim-vsnip')
-    use("simrat39/rust-tools.nvim")
+    -- Inline diagnostic
+    use('rachartier/tiny-inline-diagnostic.nvim')
 
-  -- Indent guide
-  use "lukas-reineke/indent-blankline.nvim"
+    -- Autocompletion and more
+    use('nvim-mini/mini.nvim')
+
+    -- Indent guide
+    use "lukas-reineke/indent-blankline.nvim"
+
 end)

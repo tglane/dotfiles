@@ -1,38 +1,40 @@
-local lsp = require('lsp-zero')
+require('tiny-inline-diagnostic').setup()
 
-lsp.preset('recommended')
+require('mason').setup({})
 
-lsp.setup_nvim_cmp({
-  select_behavior = 'insert'
+-- vim.lsp.config('clangd', {
+--   cmd = { 'clangd', '--background-index' },
+--   root_markers = { 'compile_commands.json', 'compile_flags.txt' },
+--   filetypes = { 'c', 'cpp' },
+-- })
+-- 
+-- vim.lsp.config('rust_analyzer', {
+--     on_attach = on_attach,
+--     capabilities = capabilities,
+--     cmd = { 'rust-analyzer' },
+--     filetypes = { 'rust' },
+--     root_markers = {"Cargo.toml", ".git"},
+--     single_file_support = true,
+--     settings = {
+--         ['rust-analyzer'] = {
+--             diagnostics = {
+--                 enable = true;
+--             }
+--         }
+--     },
+--     before_init = function(init_params, config)
+--         -- See https://github.com/rust-lang/rust-analyzer/blob/eb5da56d839ae0a9e9f50774fa3eb78eb0964550/docs/dev/lsp-extensions.md?plain=1#L26
+--         if config.settings and config.settings['rust-analyzer'] then
+--             init_params.initializationOptions = config.settings['rust-analyzer']
+--         end
+--     end,
+-- })
+
+vim.lsp.enable({'rust_analyzer', 'clangd'})
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+    buffer = buffer,
+    callback = function()
+        vim.lsp.buf.format { async = false }
+    end
 })
-
-lsp.ensure_installed({
-  'clangd',
-  'gopls',
-  'rust_analyzer',
-  'tsserver',
-  'eslint',
-})
-
-lsp.on_attach(function(client, bufnr)
-  lsp.default_keymaps({buffer = bufnr})
-end)
-
-lsp.format_on_save({
-  format_opts = {
-    async = false,
-    timeout_ms = 10000,
-  },
-  servers = {
-    ['eslint'] = {'javascript', 'typescript'},
-    ['rust_analyzer'] = {'rust'},
-    ['clangd'] = {'cpp', 'c'},
-  }
-})
-
-lsp.on_attach(function(client, bufnr) 
-    lsp.default_keymaps({buffer = bufnr})
-    lsp.buffer_autoformat()
-end)
-
-lsp.setup()
