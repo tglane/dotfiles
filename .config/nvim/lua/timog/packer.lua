@@ -31,7 +31,9 @@ return require('packer').startup(function(use)
     use { "ellisonleao/gruvbox.nvim" }
     use {'lunarvim/horizon.nvim'}
     use { 'rmehri01/onenord.nvim' }
-    use { 'haystackandroid/rusticated' }
+    use { 'rebelot/kanagawa.nvim' }
+    use { 'oskarnurm/koda.nvim' }
+    use { 'ThorstenRhau/token' }
 
     -- Syntax tree parsing
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
@@ -57,5 +59,8 @@ return require('packer').startup(function(use)
 
     -- Indent guide
     use "lukas-reineke/indent-blankline.nvim"
+
+    -- Copilot
+    use "github/copilot.vim"
 
 end)

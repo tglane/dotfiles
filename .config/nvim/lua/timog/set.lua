@@ -24,3 +24,11 @@ vim.opt.cursorcolumn = true
 vim.opt.cursorline = true
 
 vim.opt.list = true
+
+vim.opt.autoread = true
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter" }, {
+  pattern = "*",
+  callback = function()
+    vim.cmd("silent! checktime")
+  end,
+})

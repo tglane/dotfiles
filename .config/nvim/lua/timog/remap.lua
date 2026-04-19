@@ -28,8 +28,12 @@ vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 -- Append line below to current line with J without moving cursor to the end
 vim.keymap.set('n', 'J', 'mzJ`z')
 
+-- Navigate between next and previous tabs with Ctrl + h and Ctrl + l
 vim.keymap.set('n', '<C-h>', ":tabprevious<cr>")
 vim.keymap.set('n', '<C-l>', ":tabnext<cr>")
+
+vim.keymap.set('n', '<C-A-h>', ":-tabm<cr>")
+vim.keymap.set('n', '<C-A-l>', ":+tabm<cr>")
 
 function split_string(s, sep)
     local fields = {}
