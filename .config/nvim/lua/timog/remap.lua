@@ -35,6 +35,10 @@ vim.keymap.set('n', '<C-l>', ":tabnext<cr>")
 vim.keymap.set('n', '<C-A-h>', ":-tabm<cr>")
 vim.keymap.set('n', '<C-A-l>', ":+tabm<cr>")
 
+-- LSP keymaps
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
+vim.keymap.set('n', 'gr', vim.lsp.buf.references)
+
 function split_string(s, sep)
     local fields = {}
 
